@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After School Club</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 v-text="header"></h1>
+        <figure>
+            <img v-bind:src="subject.image" width="200">
+        </figure>
+        <div>
+            <h3 v-text="subject.name"></h3>
+            <p v-text="subject.location"></p>
+            <p>Price: {{subject.price}}</p>
+            
+
+        </div>
+    </div>
+
+    <script>
+        var schoolClub = new Vue({
+            el : '#app',
+            data: {
+                header:'After School Club',
+                subject: {
+                    name: 'Mathematics',
+                    location: 'London',
+                    price: 100,
+                    image :'images/math.jpg'
+                }
+            }
+        })
+        
+    </script>
+</body>
+</html>
